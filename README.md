@@ -14,10 +14,13 @@ Installs Perforce CLI (p4).
 
 ### Platforms
 
-- CentOS/RedHat
+- CentOS/RedHat 6+
+- Debian 7
+- Ubuntu 12.04/14.04
 
 ### Cookbooks
 
+- apt
 - yum 
 
 ## Usage

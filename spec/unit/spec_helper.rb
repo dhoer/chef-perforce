@@ -6,11 +6,6 @@ require 'chefspec/cacher'
 ChefSpec::Coverage.start!
 
 ::LOG_LEVEL = :warn
-::REDHAT_OPTS = {
-  platform: 'redhat',
-  version: '6.5',
-  log_level: ::LOG_LEVEL
-}
 ::CENTOS_OPTS = {
   platform: 'centos',
   version: '6.6',

@@ -16,4 +16,18 @@ describe 'perforce::default' do
       expect(chef_run).to install_package('perforce-cli')
     end
   end
+
+  describe 'debian' do
+    let(:chef_run) do
+      ChefSpec::ServerRunner.new(::UBUNTU_OPTS).converge(described_recipe)
+    end
+
+    it 'adds p4 repo' do
+      expect(chef_run).to add_apt_repository('Perforce')
+    end
+
+    it 'installs p4 cli package' do
+      expect(chef_run).to install_package('perforce-cli')
+    end
+  end
 end
