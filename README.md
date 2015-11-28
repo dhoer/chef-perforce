@@ -10,7 +10,7 @@ Installs Perforce CLI (p4).
 
 ## Requirements
 
-- Chef 11.16+
+- Chef 11+
 
 ### Platforms
 
