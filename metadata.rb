@@ -7,10 +7,10 @@ description 'Installs Perforce Command-Line Client (p4)'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version '1.2.0'
 
-supports 'centos', '~> 6'
-supports 'redhat', '~> 6'
+supports 'centos', '>= 6.0'
+supports 'redhat', '>= 6.0'
 supports 'debian', '~> 7.0'
-supports 'ubuntu', '~> 12'
+supports 'ubuntu', '>= 12.04'
 
 depends 'apt', '~> 2.9'
 depends 'yum', '~> 3.8'
