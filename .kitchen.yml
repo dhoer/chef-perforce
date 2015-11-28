@@ -12,6 +12,9 @@ platforms:
   - name: ubuntu-12.04
   - name: ubuntu-14.04
   - name: debian-7.9
+  - name: windows-2012r2
+    driver:
+      box: dhoer/windows-2012r2
 
 suites:
   - name: default

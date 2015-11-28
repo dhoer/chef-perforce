@@ -6,7 +6,7 @@
 [supermarket]: https://supermarket.chef.io/cookbooks/perforce
 [travis]: https://travis-ci.org/dhoer/chef-perforce
 
-Installs Perforce CLI (p4).
+Installs Perforce Command-Line Client (p4).
 
 ## Requirements
 
@@ -17,11 +17,13 @@ Installs Perforce CLI (p4).
 - CentOS/RedHat 6+
 - Debian 7
 - Ubuntu 12.04/14.04
+- Windows
 
 ### Cookbooks
 
 - apt
 - yum 
+- windows
 
 ## Usage
 
