@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.1
+
+- Fix Windows unattended install
+
 ## 1.2.0
 
 - Add Windows support

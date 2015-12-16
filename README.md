@@ -14,9 +14,8 @@ Installs Perforce Command-Line Client (p4).
 
 ### Platforms
 
-- CentOS/RedHat 6+
-- Debian 7
-- Ubuntu 12.04/14.04
+- CentOS/RedHat 
+- Debian/Ubuntu
 - Windows
 
 ### Cookbooks

@@ -37,6 +37,7 @@ when 'windows'
 
   windows_package 'Perforce' do
     source "#{node['perforce']['download_url']}/bin.nt#{bit}/helix-p4-#{bit}.exe"
+    options '/v"/qn"'
     installer_type :custom
   end
 else

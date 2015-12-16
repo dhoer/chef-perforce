@@ -5,12 +5,13 @@ maintainer_email 'dennis.hoer@gmail.com'
 license 'MIT'
 description 'Installs Perforce Command-Line Client (p4)'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '1.2.0'
+version '1.2.1'
 
 supports 'centos', '>= 6.0'
 supports 'redhat', '>= 6.0'
 supports 'debian', '~> 7.0'
 supports 'ubuntu', '>= 12.04'
+supports 'windows'
 
 depends 'apt', '~> 2.9'
 depends 'yum', '~> 3.8'
