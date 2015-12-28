@@ -35,8 +35,8 @@ when 'debian'
 when 'windows'
   bit = node['kernel']['machine'] == 'x86_64' ? 'x64' : 'x86'
 
-  windows_package 'Perforce' do
-    source "#{node['perforce']['download_url']}/bin.nt#{bit}/helix-p4-#{bit}.exe"
+  windows_package 'Helix P4 Command-Line Client' do
+    source "#{node['perforce']['download_url']}/#{node['perforce']['release']}/bin.nt#{bit}/helix-p4-#{bit}.exe"
     options '/v"/qn"'
     installer_type :custom
   end

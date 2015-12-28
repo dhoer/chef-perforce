@@ -37,7 +37,7 @@ describe 'perforce::default' do
     end
 
     it 'installs p4 command-line client package' do
-      expect(chef_run).to install_windows_package('Perforce')
+      expect(chef_run).to install_windows_package('Helix P4 Command-Line Client')
     end
   end
 end

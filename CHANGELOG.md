@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.2
+
+- Change windows_package name to match registry DisplayName to prevent re-installs
+
 ## 1.2.1
 
 - Fix Windows unattended install
