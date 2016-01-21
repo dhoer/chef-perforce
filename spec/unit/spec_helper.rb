@@ -10,17 +10,17 @@ ChefSpec::Coverage.start!
   platform: 'centos',
   version: '6.6',
   log_level: ::LOG_LEVEL
-}
+}.freeze
 ::UBUNTU_OPTS = {
   platform: 'ubuntu',
   version: '14.04',
   log_level: ::LOG_LEVEL
-}
+}.freeze
 ::WINDOWS_OPTS = {
   platform: 'windows',
   version: '2012R2',
   log_level: ::LOG_LEVEL
-}
+}.freeze
 ::CHEFSPEC_OPTS = {
   log_level: ::LOG_LEVEL
-}
+}.freeze
