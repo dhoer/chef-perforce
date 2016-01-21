@@ -15,7 +15,7 @@ supports 'windows'
 
 depends 'apt', '~> 2.9'
 depends 'yum', '~> 3.8'
-depends 'windows', '~> 1.38'
+depends 'windows', '~> 1.0'
 
 source_url 'https://github.com/dhoer/chef-perforce' if respond_to?(:source_url)
 issues_url 'https://github.com/dhoer/chef-perforce/issues' if respond_to?(:issues_url)
