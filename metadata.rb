@@ -13,8 +13,8 @@ supports 'debian', '~> 7.0'
 supports 'ubuntu', '>= 12.04'
 supports 'windows'
 
-depends 'apt', '~> 2.9'
-depends 'yum', '~> 3.8'
+depends 'apt', '~> 2.0'
+depends 'yum', '~> 3.0'
 depends 'windows', '~> 1.0'
 
 source_url 'https://github.com/dhoer/chef-perforce' if respond_to?(:source_url)
