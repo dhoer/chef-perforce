@@ -1,6 +1,10 @@
 # CHANGELOG
 
-## 1.2.3 
+## 1.2.4 2015-01-22
+
+- Relax pessimistic locking on apt and yum dependencies 
+
+## 1.2.3 2015-01-21
 
 - Fix #2 Incompatible windows version
 
