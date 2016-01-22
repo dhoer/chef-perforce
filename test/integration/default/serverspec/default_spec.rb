@@ -10,11 +10,11 @@ end
 
 case os[:family]
 when 'windows'
-  describe command('p4.exe') do
+  describe command('cmd /c "C:\Program Files\Perforce\p4.exe"') do
     its(:stderr) { should match(/Perforce client/) }
   end
 else # linux
-  describe command('p4') do
-    its(:stderr) { should match(/Perforce client/) }
+  describe command('p4 2>&1') do
+    its(:stdout) { should match(/Perforce client/) }
   end
 end
