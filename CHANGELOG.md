@@ -5,30 +5,30 @@
 - Add Fedora 19+ support
 - Add Ubuntu 16.04 support
 
-## 1.2.4 2015-01-22
+## 1.2.4 2016-01-22
 
 - Relax pessimistic locking on apt and yum dependencies 
 
-## 1.2.3 2015-01-21
+## 1.2.3 2016-01-21
 
 - Fix #2 Incompatible windows version
 
-## 1.2.2
+## 1.2.2 2015-12-28
 
 - Change windows_package name to match registry DisplayName to prevent re-installs
 
-## 1.2.1
+## 1.2.1 2015-12-16
 
 - Fix Windows unattended install
 
-## 1.2.0
+## 1.2.0 2015-11-27
 
 - Add Windows support
 
-## 1.1.0
+## 1.1.0 2015-11-27
 
 - Add Debian support
 
-## 1.0.0
+## 1.0.0 2015-10-27
 
 - Initial release
