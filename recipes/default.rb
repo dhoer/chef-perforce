@@ -4,7 +4,7 @@ fail_msg = "Platform #{node['platform']} not supported!"
 # https://www.perforce.com/perforce-packages
 case node['platform_family']
 when 'rhel', 'fedora'
-  major_version = major_version < 19 ? '6' : '7' if node['platform'] == 'fedora'
+  major_version = major_version.to_i < 19 ? '6' : '7' if node['platform'] == 'fedora'
 
   yum_repository 'Perforce' do
     description 'Perforce Repo'
@@ -16,7 +16,7 @@ when 'rhel', 'fedora'
   package 'perforce-cli'
 when 'debian'
   case major_version
-  when '14'
+  when '14', '16', '8'
     dist = 'trusty'
   when '12'
     dist = 'precise'
