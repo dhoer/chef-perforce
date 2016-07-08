@@ -3,7 +3,9 @@ fail_msg = "Platform #{node['platform']} not supported!"
 
 # https://www.perforce.com/perforce-packages
 case node['platform_family']
-when 'rhel'
+when 'rhel', 'fedora'
+  major_version = major_version < 19 ? '6' : '7' if node['platform'] == 'fedora'
+
   yum_repository 'Perforce' do
     description 'Perforce Repo'
     baseurl "http://package.perforce.com/yum/rhel/#{major_version}/x86_64"
@@ -21,7 +23,7 @@ when 'debian'
   when '7'
     dist = 'wheezy'
   else
-    fail(fail_msg)
+    raise(fail_msg)
   end
 
   apt_repository 'Perforce' do
@@ -32,15 +34,6 @@ when 'debian'
   end
 
   package 'perforce-cli'
-when 'fedora'
-  yum_repository 'Perforce' do
-    description 'Perforce Repo'
-    baseurl "http://package.perforce.com/yum/rhel/7/x86_64"
-    gpgkey 'https://package.perforce.com/perforce.pubkey'
-    action :create
-  end
-  package 'perforce-cli'
-
 when 'windows'
   bit = node['kernel']['machine'] == 'x86_64' ? 'x64' : 'x86'
 
@@ -50,5 +43,5 @@ when 'windows'
     installer_type :custom
   end
 else
-  fail(fail_msg)
+  raise(fail_msg)
 end

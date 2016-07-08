@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0 2016-07-07
+
+- Add support for Fedora
+
 ## 1.2.4 2015-01-22
 
 - Relax pessimistic locking on apt and yum dependencies 

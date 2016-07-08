@@ -5,7 +5,9 @@ require_relative 'spec_helper'
 describe 'perforce::default' do
   describe 'rhel' do
     let(:chef_run) do
-      ChefSpec::ServerRunner.new(::CENTOS_OPTS).converge(described_recipe)
+      ChefSpec::ServerRunner.new(platform: 'centos',
+                                 version: '6.6',
+                                 log_level: ::LOG_LEVEL).converge(described_recipe)
     end
 
     it 'adds p4 repo' do
@@ -19,7 +21,9 @@ describe 'perforce::default' do
 
   describe 'debian' do
     let(:chef_run) do
-      ChefSpec::ServerRunner.new(::UBUNTU_OPTS).converge(described_recipe)
+      ChefSpec::ServerRunner.new(platform: 'ubuntu',
+                                 version: '14.04',
+                                 log_level: ::LOG_LEVEL).converge(described_recipe)
     end
 
     it 'adds p4 repo' do
@@ -33,7 +37,9 @@ describe 'perforce::default' do
 
   describe 'windows' do
     let(:chef_run) do
-      ChefSpec::ServerRunner.new(::WINDOWS_OPTS).converge(described_recipe)
+      ChefSpec::ServerRunner.new(platform: 'windows',
+                                 version: '2012R2',
+                                 log_level: ::LOG_LEVEL).converge(described_recipe)
     end
 
     it 'installs p4 command-line client package' do
