@@ -1,10 +1,9 @@
-major_version = node['platform_version'].split('.')[0] # returns major version e.g. version 6.4 would return 6
-fail_msg = "Platform #{node['platform']} not supported!"
+major_version = node['platform_version'].split('.')[0] # returns major version, e.g., version 6.4 would return 6
 
 # https://www.perforce.com/perforce-packages
 case node['platform_family']
 when 'rhel', 'fedora'
-  major_version = major_version.to_i < 19 ? raise('Only Fedora 19+ supported') : '7' if node['platform'] == 'fedora'
+  major_version = major_version.to_i < 19 ? raise('Only Fedora 19+ supported!') : '7' if node['platform'] == 'fedora'
 
   yum_repository 'Perforce' do
     description 'Perforce Repo'
@@ -16,14 +15,12 @@ when 'rhel', 'fedora'
   package 'perforce-cli'
 when 'debian'
   case major_version
-  when '14', '16', '8'
-    dist = 'trusty'
+    when '7'
+      dist = 'wheezy'
   when '12'
     dist = 'precise'
-  when '7'
-    dist = 'wheezy'
-  else
-    raise(fail_msg)
+  else # Assume Ubuntu 14+ or Debian 8+
+    dist = 'trusty'
   end
 
   apt_repository 'Perforce' do
@@ -43,5 +40,5 @@ when 'windows'
     installer_type :custom
   end
 else
-  raise(fail_msg)
+  raise("Platform #{node['platform']} not supported!")
 end
