@@ -14,14 +14,14 @@ when 'rhel', 'fedora'
 
   package 'perforce-cli'
 when 'debian'
-  case major_version
-    when '7'
-      dist = 'wheezy'
-  when '12'
-    dist = 'precise'
-  else # Assume Ubuntu 14+ or Debian 8+
-    dist = 'trusty'
-  end
+  dist = case major_version
+         when '7'
+           'wheezy'
+         when '12'
+           'precise'
+         else # Assume Ubuntu 14+ or Debian 8+
+           'trusty'
+         end
 
   apt_repository 'Perforce' do
     uri 'http://package.perforce.com/apt/ubuntu'
