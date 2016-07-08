@@ -2,7 +2,7 @@
 
 ## 1.3.0 2016-07-07
 
-- Add Fedora support
+- Add Fedora 19+ support
 - Add Ubuntu 16.04 support
 
 ## 1.2.4 2015-01-22

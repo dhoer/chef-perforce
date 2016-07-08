@@ -11,8 +11,8 @@ version '1.3.0'
 
 supports 'centos', '>= 6.0'
 supports 'redhat', '>= 6.0'
-supports 'debian', '~> 7.0'
-supports 'fedora', '~> 12'
+supports 'debian', '>= 7.0'
+supports 'fedora', '>= 19'
 supports 'ubuntu', '>= 12.04'
 supports 'windows'
 
