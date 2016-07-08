@@ -32,6 +32,15 @@ when 'debian'
   end
 
   package 'perforce-cli'
+when 'fedora'
+  yum_repository 'Perforce' do
+    description 'Perforce Repo'
+    baseurl "http://package.perforce.com/yum/rhel/7/x86_64"
+    gpgkey 'https://package.perforce.com/perforce.pubkey'
+    action :create
+  end
+  package 'perforce-cli'
+
 when 'windows'
   bit = node['kernel']['machine'] == 'x86_64' ? 'x64' : 'x86'
 
