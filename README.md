@@ -1,10 +1,13 @@
 # Perforce Cookbook
 
 [![Cookbook Version](http://img.shields.io/cookbook/v/perforce.svg?style=flat-square)][supermarket]
-[![Build Status](http://img.shields.io/travis/dhoer/chef-perforce.svg?style=flat-square)][travis]
+[![linux](http://img.shields.io/travis/dhoer/chef-perforce/master.svg?label=linux&style=flat-square)][linux]
+[![win](https://img.shields.io/appveyor/ci/dhoer/chef-perforce/master.svg?label=windows&style=flat-square)][win]
 
 [supermarket]: https://supermarket.chef.io/cookbooks/perforce
-[travis]: https://travis-ci.org/dhoer/chef-perforce
+[linux]: https://travis-ci.org/dhoer/chef-perforce/branches
+[win]: https://ci.appveyor.com/project/dhoer/chef-perforce
+
 
 Installs Perforce Command-Line Client (p4).
 
