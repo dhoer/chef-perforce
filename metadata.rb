@@ -15,6 +15,7 @@ supports 'debian', '>= 7.0'
 supports 'fedora', '>= 19.0'
 supports 'ubuntu', '>= 12.04'
 supports 'windows'
+supports 'mac_os_x'
 
 depends 'apt', '~> 2.0'
 depends 'yum', '~> 3.0'
