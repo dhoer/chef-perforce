@@ -15,6 +15,12 @@ platforms:
   - name: windows-2012r2
     driver:
       box: dhoer/windows-2012r2
+  - name: macosx-10.11
+    driver:
+      provider: vmware_fusion
+  - name: macosx-10.12
+    driver:
+      provider: vmware_fusion
 
 suites:
   - name: default

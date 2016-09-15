@@ -46,4 +46,34 @@ describe 'perforce::default' do
       expect(chef_run).to install_windows_package('Helix P4 Command-Line Client')
     end
   end
+
+  describe 'mac_os_x' do
+    let(:chef_run) do
+      ChefSpec::ServerRunner.new(platform: 'mac_os_x',
+                                 version: '10.11.1',
+                                 log_level: ::LOG_LEVEL).converge(described_recipe)
+    end
+
+    it 'creates perforce directory' do
+      expect(chef_run).to create_directory('/opt/perforce').with(
+        user: 'root',
+        group: 'wheel'
+      )
+    end
+    it 'installs p4 command-line client package' do
+      expect(chef_run).to create_remote_file('/opt/perforce/p4')
+    end
+    it 'creates PATH extension directory' do
+      expect(chef_run).to create_directory('/etc/paths.d').with(
+        user: 'root',
+        group: 'wheel'
+      )
+    end
+    it 'installs PATH extension file' do
+      expect(chef_run).to create_file('/etc/paths.d/perforce').with(
+        user: 'root',
+        group: 'wheel'
+      )
+    end
+  end
 end
