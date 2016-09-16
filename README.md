@@ -35,7 +35,7 @@ Include recipe in cookbook or run list to install Perforce CLI.
 
 ## Getting Help
 
-- Ask specific questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/perforce).
+- Ask specific questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/chef+perforce).
 - Report bugs and discuss potential features in [Github issues](https://github.com/dhoer/chef-perforce/issues).
 
 ## Contributing
