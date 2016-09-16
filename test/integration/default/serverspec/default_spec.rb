@@ -13,6 +13,11 @@ when 'windows'
   describe command('cmd /c "C:\Program Files\Perforce\p4.exe"') do
     its(:stderr) { should match(/Perforce client/) }
   end
+# TODO: https://github.com/test-kitchen/test-kitchen/issues/1120
+when 'darwin'
+  describe command('/opt/perforce/p4 2>&1') do
+    its(:stdout) { should match(/Perforce client/) }
+  end
 else # linux
   describe command('p4 2>&1') do
     its(:stdout) { should match(/Perforce client/) }

@@ -39,6 +39,42 @@ when 'windows'
     options '/v"/qn"'
     installer_type :custom
   end
+when 'mac_os_x'
+  bit = node['kernel']['machine'] == 'x86_64' ? 'x86_64' : 'x86'
+
+  # We put p4 in /opt/perforce and not in /usr/local/bin as that space is locked down by OSX 10.11 and above
+  directory '/opt/perforce' do
+    owner 'root'
+    group 'wheel'
+    mode '00755'
+    action :create
+    recursive true
+  end
+
+  remote_file '/opt/perforce/p4' do
+    source "#{node['perforce']['download_url']}/#{node['perforce']['release']}/bin.macosx105#{bit}/p4"
+    owner 'root'
+    group 'wheel'
+    mode '00755'
+    action :create
+  end
+
+  # The below path exists on El Capitan but no longer exists in Sierra but continues to behave in the same way
+  directory '/etc/paths.d' do
+    owner 'root'
+    group 'wheel'
+    mode '00755'
+    action :create
+    recursive true
+  end
+
+  file '/etc/paths.d/perforce' do
+    content '/opt/perforce'
+    owner 'root'
+    group 'wheel'
+    mode '00755'
+    action :create
+  end
 else
   raise("Platform #{node['platform']} not supported!")
 end
