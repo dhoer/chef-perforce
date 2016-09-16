@@ -32,8 +32,9 @@ matrix:
     rvm: 2.1.7
     osx_image: beta-xcode6.1
 
+before_install: gem install bundler --quiet --no-ri --no-rdoc
+
 script:
-- gem install bundler --quiet --no-ri --no-rdoc
 - KITCHEN_YAML=.kitchen.localhost.yml bundle exec kitchen verify macosx
 
 branches:
