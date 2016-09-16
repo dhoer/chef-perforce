@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.4.1 2016-09-16
+
+- Debian 8 should use trusty package
+- Add support for Ubuntu 13 and 15 versions
+
 ## 1.4.0 2016-09-16
 
 - Use p4 r16.1 release
