@@ -33,6 +33,7 @@ matrix:
     osx_image: beta-xcode6.1
 
 script:
+- gem install bundler
 - KITCHEN_YAML=.kitchen.localhost.yml bundle exec kitchen verify macosx
 
 branches:
