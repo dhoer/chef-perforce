@@ -3,7 +3,7 @@ major_version = node['platform_version'].split('.')[0] # returns major version, 
 # https://www.perforce.com/perforce-packages
 case node['platform_family']
 when 'rhel', 'fedora'
-  major_version = major_version.to_i < 19 ? raise('Only Fedora 19+ supported!') : '7' if node['platform'] == 'fedora'
+  major_version = major_version.to_i < 19 ? raise('Only Fedora 19+ supported!') : '12' if node['platform'] == 'fedora'
 
   yum_repository 'Perforce' do
     description 'Perforce Repo'
@@ -15,12 +15,12 @@ when 'rhel', 'fedora'
   package 'perforce-cli'
 when 'debian'
   dist = case major_version
-         when '7'
-           'wheezy'
          when '12'
            'precise'
-         else # Assume Ubuntu 14+ or Debian 8+
+         when '14'
            'trusty'
+         else # Assume Ubuntu 16+ or Debian 8+
+           'xenial'
          end
 
   apt_repository 'Perforce' do
