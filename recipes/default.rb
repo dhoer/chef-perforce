@@ -15,9 +15,9 @@ when 'rhel', 'fedora'
   package 'perforce-cli'
 when 'debian'
   dist = case major_version # http://askubuntu.com/a/445496
-         when '12', '7'
+         when '12', '13', '7'
            'precise'
-         when '14', '8'
+         when '14', '15', '8'
            'trusty'
          else # Assume Ubuntu 16+ or Debian 9+
            'xenial'
