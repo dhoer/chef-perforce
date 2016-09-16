@@ -2,12 +2,13 @@
 
 [![Cookbook Version](http://img.shields.io/cookbook/v/perforce.svg?style=flat-square)][supermarket]
 [![linux](http://img.shields.io/travis/dhoer/chef-perforce/master.svg?label=linux&style=flat-square)][linux]
+[![osx](http://img.shields.io/travis/dhoer/chef-perforce/macosx.svg?label=macosx&style=flat-square)][osx]
 [![win](https://img.shields.io/appveyor/ci/dhoer/chef-perforce/master.svg?label=windows&style=flat-square)][win]
 
 [supermarket]: https://supermarket.chef.io/cookbooks/perforce
 [linux]: https://travis-ci.org/dhoer/chef-perforce/branches
+[osx]: https://travis-ci.org/dhoer/chef-perforce/branches
 [win]: https://ci.appveyor.com/project/dhoer/chef-perforce
-
 
 Installs Perforce Command-Line Client (p4).
 
@@ -19,6 +20,7 @@ Installs Perforce Command-Line Client (p4).
 
 - CentOS/RedHat/Fedora 
 - Debian/Ubuntu
+- Mac OS X
 - Windows
 
 ### Cookbooks
