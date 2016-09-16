@@ -15,7 +15,7 @@ when 'rhel', 'fedora'
   package 'perforce-cli'
 when 'debian'
   dist = case major_version
-         when '12'
+         when '12', '7'
            'precise'
          when '14'
            'trusty'
