@@ -11,4 +11,5 @@ group :integration do
   gem 'kitchen-vagrant', '~> 0.20'
   gem 'winrm-fs', '~> 1.0'
   gem 'kitchen-dokken', '~> 0.0'
+  gem 'kitchen-localhost', '~> 0.3'
 end
