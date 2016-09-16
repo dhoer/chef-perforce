@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.4.0 2016-09-16
+
+- Use p4 r16.1 release
+- Add Mac OS X support
+
 ## 1.3.0 2016-07-07
 
 - Add Fedora 19+ support
