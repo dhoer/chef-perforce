@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.0.0 2016-10-04
+
+- Drop support for Chef 11
+
 ## 1.4.1 2016-09-16
 
 - Debian 8 should use trusty package

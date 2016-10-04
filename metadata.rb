@@ -5,9 +5,11 @@ maintainer_email 'dennis.hoer@gmail.com'
 license 'MIT'
 description 'Installs Perforce Command-Line Client (p4)'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-source_url 'https://github.com/dhoer/chef-perforce' if respond_to?(:source_url)
-issues_url 'https://github.com/dhoer/chef-perforce/issues' if respond_to?(:issues_url)
-version '1.4.1'
+source_url 'https://github.com/dhoer/chef-perforce'
+issues_url 'https://github.com/dhoer/chef-perforce/issues'
+version '2.0.0'
+
+chef_version '>= 12.6'
 
 supports 'centos', '>= 6.0'
 supports 'redhat', '>= 6.0'
@@ -19,5 +21,3 @@ supports 'mac_os_x'
 
 depends 'apt', '~> 4.0'
 depends 'yum', '~> 3.0'
-
-chef_version '>= 12.6'
