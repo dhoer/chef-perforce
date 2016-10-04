@@ -17,6 +17,7 @@ supports 'ubuntu', '>= 12.04'
 supports 'windows'
 supports 'mac_os_x'
 
-depends 'apt', '~> 2.0'
+depends 'apt', '~> 4.0'
 depends 'yum', '~> 3.0'
-depends 'windows', '~> 1.0'
+
+chef_version '>= 12.6'
