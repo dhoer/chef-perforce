@@ -15,7 +15,7 @@ describe 'perforce::default' do
     end
 
     it 'installs p4 cli package' do
-      expect(chef_run).to install_package('perforce-cli')
+      expect(chef_run).to install_package('helix-cli')
     end
   end
 
@@ -31,7 +31,7 @@ describe 'perforce::default' do
     end
 
     it 'installs p4 command-line client package' do
-      expect(chef_run).to install_package('perforce-cli')
+      expect(chef_run).to install_package('helix-cli')
     end
   end
 
