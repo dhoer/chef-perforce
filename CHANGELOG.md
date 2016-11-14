@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.1.0 2016-11-14
+
+- Support new cli package name
+
 ## 2.0.0 2016-10-04
 
 - Drop support for Chef 11

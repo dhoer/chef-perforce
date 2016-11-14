@@ -7,7 +7,7 @@ description 'Installs Perforce Command-Line Client (p4)'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 source_url 'https://github.com/dhoer/chef-perforce'
 issues_url 'https://github.com/dhoer/chef-perforce/issues'
-version '2.0.0'
+version '2.1.0'
 
 chef_version '>= 12.6'
 
