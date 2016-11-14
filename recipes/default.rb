@@ -12,7 +12,7 @@ when 'rhel', 'fedora'
     action :create
   end
 
-  package 'perforce-cli'
+  package 'helix-cli'
 when 'debian'
   dist = case major_version # http://askubuntu.com/a/445496
          when '12', '13', '7'
@@ -30,7 +30,7 @@ when 'debian'
     key 'https://package.perforce.com/perforce.pubkey'
   end
 
-  package 'perforce-cli'
+  package 'helix-cli'
 when 'windows'
   bit = node['kernel']['machine'] == 'x86_64' ? 'x64' : 'x86'
 
