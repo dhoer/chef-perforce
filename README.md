@@ -14,7 +14,7 @@ Installs Perforce Command-Line Client (p4).
 
 ## Requirements
 
-- Chef 12.6+
+- Chef 12.14+
 
 ### Platforms
 
@@ -22,11 +22,6 @@ Installs Perforce Command-Line Client (p4).
 - Debian/Ubuntu
 - Mac OS X
 - Windows
-
-### Cookbooks
-
-- apt
-- yum 
 
 ## Usage
 

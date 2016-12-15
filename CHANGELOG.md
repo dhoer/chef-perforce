@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.2.0 2016-12-15
+
+- Drop apt and yum cookbook dependencies by going to Chef 12.14.x
+
 ## 2.1.0 2016-11-14
 
 - Support new cli package name
